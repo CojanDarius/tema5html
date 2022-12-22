@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head><title>Pagina de aplicare</title></head>
+    <body>
+        <form>
+            <fieldset>
+                <legend>Date personale:</legend>
+                <label for="nume">Nume:&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                <input type="text" id="nume" name="nume" required><br>
+                <input type="hidden" id="browser" name="browser" value="Google Chrome">
+                <label for="prenume">Prenume:</label>
+                <input type="text" id="prenume" name="prenume" required><br>
+                <label for="adresa">Localitate:</label>
+                <input type="text" id="adresa" name="adresa"><br>
+                <label for="age">Varsta:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                <input type="number" id="age" name="age" size="2" min="18" max="65" required><br> 
+                <label for="birthday">Data nasterii:</label>
+                <input type="date" id="birthday" name="birthday"><br>
+                <label for="gen">Sexul:</label>
+                <input list="gen">
+                <datalist id="gen">
+                    <option value="Masculin"></option>
+                    <option value="Feminin"></option>
+                    <option value="Altul"></option>
+                    <option value="Prefer sa nu spun"></option>
+                </datalist>
+            </fieldset>
+
+            <fieldset>
+                <legend>Date de contact:</legend>
+                <label for="email">Mail:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                <input type="email" id="email" name="email" required><br>
+                <label for="phone">Telefon:&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                <input type="tel" id="phone" name="phone" size="10" required
+                       pattern="regexp"
+                       placeholder="0744-123-456"
+                       pattern="[0-9]{4}-[0-9]{3}-[0-9]{3}"><br>
+                <label for="social">Facebook:</label>
+                <input type="url" id="social" name="social">       
+            </fieldset>
+
+            <input type="submit" onclick="alert('Multumim ca ai completat prima parte a formularului')" value="Trimite">
+        </form>
+
+        <form>
+            <label for="filiala">Alege filiala unde doresti sa aplici:</label><br>
+            <select id="filiala" name="filiala">
+                <optgroup label="Cluj">
+                    <option value="Cluj-Napoca">Cluj-Napoca</option>
+                    <option value="Floresti">Floresti</option>
+                    <option value="Dej">Dej</option>
+                    <option value="Turda">Turda</option>
+                </optgroup>
+                <optgroup label="Bihor">
+                    <option value="Oradea">Oradea</option>
+                    <option value="Beius">Beius</option>
+                </optgroup>
+            </select>
+
+            <p>Postul pentru care doresti sa aplici:</p>
+            <input type="checkbox" id="post1" name="post" value="Back-end developer">
+            <label for="post1">Back-end developer</label><br>
+            <input type="checkbox" id="post2" name="post" value="Front-end developer">
+            <label for="post2">Front-end developer</label><br>
+            <input type="checkbox" id="post3" name="post" value="Full-stack developer">
+            <label for="post3">Full-stack developer</label><br>
+            <input type="checkbox" id="post4" name="post" value="Software tester">
+            <label for="post4">Software tester</label>
+
+            <p>Care este nivelul tau de experienta:</p>
+            <input type="radio" id="nivel0" name="exp" value="Fara experienta">
+            <label for="nivel0">Fara experienta</label><br>
+            <input type="radio" id="nivel1" name="exp" value="Junior (0-2 ani)">
+            <label for="nivel1">Junior (0-2 ani)</label><br>
+            <input type="radio" id="nivel2" name="exp" value="Midle (2-5 ani)">
+            <label for="nivel2">Midle (2-5 ani)</label><br>
+            <input type="radio" id="nivel3" name="exp" value="Senior (>5ani)">
+            <label for="nivel3">Senior (>5ani)</label><br>
+
+            <p>Ce calitati te recomanda pentru post?</p>
+            <textarea id="descriere" name="descriere" rows="5" cols="50"
+            placeholder="Descrie-te in cateva cuvinte"></textarea><br>
+
+            
+            <input type="reset" value="Reseteaza campurile completate"><br><br>
+            <label for="CV">Incarca mai jos CV-ul tau:</label><br>
+            <input type="file" id="CV" name="CV" ><br><br>
+            <input type="submit" onclick="alert('Felicitati!Ai aplicat cu succes.O sa primesti un raspuns in cel mai scurt timp posibil!')" value="Aplica!">
+        </form>
+    </body>
+</html>
